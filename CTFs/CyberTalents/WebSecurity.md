@@ -40,7 +40,7 @@ The code is hexadecimal characters that when decoded tells us that the username 
 #### flag: {J4V4_Scr1Pt_1S_S0_D4MN_FUN}
 
 ## 03 Cool Name Effect
-* Try anytype of injection
+* Try any type of injection
   ```
   <script>
   ```
@@ -68,3 +68,22 @@ and got the flag
 * by using this link we can access the database and get the flag {"flag":"ab003765f3424bf8e2c8d1d69762d72c"}
 * The flag is md5 encrypted by decrypting it you will get the actual flag
 #### flag: badboy
+
+## who am i?
+* Check the page source you will find the credentials for a guest account
+* Intercept the request while logging in as a guest you will notice an encoded cookie
+* Decode the cookie using a Base64 decoder you will get (Guest7)
+* Encode admin and replace Guest7 with admin in encoded format then forward the packet and you will get the flag
+
+#### flag: FLag{B@D_4uTh1Nt1C4Ti0n}
+
+## Blue Inc.
+* Login with the demo account
+* Try to access my profile while intercepting the packet
+* You will find a cookie user=demo
+* Change demo into admin and you will get the flag
+
+#### flag: 15716a249064f7e9684a816dcdb05282
+
+
+## 
