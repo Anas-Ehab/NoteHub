@@ -32,3 +32,43 @@ https://overthewire.org/wargames/natas/
   ![image](https://github.com/Anas-Ehab/2023RoadmapNotes/assets/55194408/f24a488b-be36-4bd8-aa70-07a6cccef2d8)
 
 #### Flag/Password: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+
+
+## Level 3
+* Check for robots.txt (http://natas3.natas.labs.overthewire.org/robots.txt)
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/95f7ccec-ddd7-4a76-95ea-97600c759dc9)
+
+* Check the mentioned directory (http://natas3.natas.labs.overthewire.org/s3cr3t/)
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/3791ff26-328e-48a6-9a4b-2154910d6b7a)
+
+* Open the file and you will find the username and password
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/96a26994-3a37-4450-bde4-988c0f0f21bf)
+
+#### Flag/Password: tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+
+## Level 4
+* By Pressing the refresh button and capturing the packet we can change the Referer to Natas5 using Burp
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/3ae9fb92-a312-4956-a4c0-bbdc11cb1249)
+
+* After doing so we will get the password
+
+  #### Flag/Password: Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+
+## Level 5
+* By capturing the packet of logging in we will see that there is a *Cookie: loggedin=0* line by changing the 0 to 1 using Burp we get access
+
+#### Flag/Password: fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
+
+## Level 6
+* View the source of the page or press the view source button and you will find a file named: *index-source.html*
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/ab9b496d-884c-4e72-b43f-b336b5fd49d5)
+
+* Check this file and you will find an included file which the password is taken from (*includes/secret.inc*)
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/276f9e8f-c2c3-4787-829b-a5f5529f4c40)
+
+* Check this file and you will get the secret (*http://natas6.natas.labs.overthewire.org/includes/secret.inc*)
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/de08ce3c-bbc5-4458-bca5-652778810efc)
+
+* Typing in the secret will give you the flag (*FOEIUWGHFEEUHOFUOIU*)
+  
+#### Flag/Password: jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
