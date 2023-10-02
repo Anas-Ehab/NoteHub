@@ -86,4 +86,32 @@ and got the flag
 #### flag: 15716a249064f7e9684a816dcdb05282
 
 
-## 
+## Easy Message (Looked up a write-up)
+* Fuzz until you find /?source file (./ffuf -u URL/FUZZ -w WORDLIST -p 1)
+* In the file you will find the base64 encoded username and password
+* decode them and you will get the username: Cyber-Talent and password: Cyber-Talent
+* Login using these username and passwords and you will get an encoded text
+* Using CyberChef Magic function you will know that it's morse code by decoding it you will get the flag (https://gchq.github.io/CyberChef/)
+
+#### flag: FLAG(I-KN0W-Y0U-AR3-M0RS3)
+
+## Maximum Courage
+* By fuzzing using fuff I found .git (./ffuf -u URL/FUZZ -w WORDLIST -p 1)
+* Using Git Dumper I managed to get a local version of the .git (./gitdumper.sh URL/.git/ DIRNAME)
+* Using Git Extractor I managed to get the files including flag.php (./extractor.sh SRCFOLDER DSTFOLDER)
+
+#### flag: be607453caada6a05d00c0ea0057f733
+
+## Cheers 
+* The error " Undefined index" is shown when there is an undefined variable in PHP to bypass it pass the variable in the URL (URL/?UNDEFINEDVAR)
+* After passing the variable another error is shown with another index to pass both variables we use *&* (URL/?UNDEFINEDVAR1&UNDEFINEDVAR2)
+* After passing the 2 variables we get the flag
+
+#### flag: FLAG{k33p_c4lm_st4rt_c0d!ng}
+
+## Easy Access (Checked a write-up)
+* Check for sql injecton (Admin')
+* You will get an error meaning that it's vulnerable to SQL injection (Admin' OR '1'='1'')
+* Anything in the password alongside the injection payload will get you logged in as an admin and will provide the flag
+
+#### flag: flag{!njection_3v3ry_wh3r3}
