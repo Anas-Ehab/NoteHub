@@ -72,3 +72,37 @@ https://overthewire.org/wargames/natas/
 * Typing in the secret will give you the flag (*FOEIUWGHFEEUHOFUOIU*)
   
 #### Flag/Password: jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
+
+## Level 7
+* View the source of the page and you will find a hint *<!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 -->*
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/6e689744-ca2e-415f-a41b-6029dfa991d2)
+
+  * By checking the URL you will find that the page is passed as a parameter to a function in index.php *index.php?page=home*
+  
+  * By changing the parameter to */etc/natas_webpass/natas8* you will get the flag (http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8)
+
+#### Flag/Password: a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
+
+## Level 8
+* View the source of the page and you will find the function that checks the secret
+
+  ![image](https://github.com/Anas-Ehab/NotesHub/assets/55194408/0cbf2843-cbb1-426b-974e-51e38b694f2c)
+
+  By examining this we can figure the way to reverse it, first we need to reverse the bin2hex by using hex2bin after that we take the output and we use strrev on it, finally we decode it from base64
+
+* After doing all of this we get the secret which is: *oubWYf2kBq*
+* By typing in the secret we get the flag
+
+#### Flag/Password: Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd
+
+## Level 9
+* By examining the source code we find out that whatever we type is included with no filtering
+* By testing file traversal we find it vulnerable (test;cat ../../../../etc/natas_webpass/natas10)
+* The flag is shown in the file natas10
+
+#### Flag/Password: D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
+
+
+## Level 10
+* 
+
