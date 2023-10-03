@@ -90,7 +90,7 @@ and got the flag
 * Fuzz until you find /?source file (./ffuf -u URL/FUZZ -w WORDLIST -p 1)
 * In the file you will find the base64 encoded username and password
 * decode them and you will get the username: Cyber-Talent and password: Cyber-Talent
-* Login using these username and passwords and you will get an encoded text
+* Login using these username and password and you will get an encoded text
 * Using CyberChef Magic function you will know that it's morse code by decoding it you will get the flag (https://gchq.github.io/CyberChef/)
 
 #### flag: FLAG(I-KN0W-Y0U-AR3-M0RS3)
@@ -102,6 +102,7 @@ and got the flag
 
 #### flag: be607453caada6a05d00c0ea0057f733
 
+
 ## Cheers 
 * The error " Undefined index" is shown when there is an undefined variable in PHP to bypass it pass the variable in the URL (URL/?UNDEFINEDVAR)
 * After passing the variable another error is shown with another index to pass both variables we use *&* (URL/?UNDEFINEDVAR1&UNDEFINEDVAR2)
@@ -109,9 +110,21 @@ and got the flag
 
 #### flag: FLAG{k33p_c4lm_st4rt_c0d!ng}
 
+
 ## Easy Access (Checked a write-up)
 * Check for sql injecton (Admin')
 * You will get an error meaning that it's vulnerable to SQL injection (Admin' OR '1'='1'')
 * Anything in the password alongside the injection payload will get you logged in as an admin and will provide the flag
 
 #### flag: flag{!njection_3v3ry_wh3r3}
+
+
+## bean (Checked a write-up)
+* Fuzz for directories (./fuff -u URL/FUZZ -w WORDLIST -p 1)
+* Found files directory checked around the directory but couldn't find anything useful
+* Tried using dotdotpwn to do file traversal attack but couldn't get any result
+* After looking up a write-up I found that it's indeed a file traversal attack (URL/files../)
+* This will show up the list of directories after checking the */home/* directory I got the flag (http://wcamxwl32pue3e6mr4gvmkxal3dm0wz0xp1eawvo-web.cybertalentslabs.com/files../home/)
+
+#### flag: FLAG{Nginx_nOt_aLWays_sEcUre_bY_The_waY}
+
