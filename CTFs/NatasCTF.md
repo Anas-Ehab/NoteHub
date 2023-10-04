@@ -104,5 +104,11 @@ https://overthewire.org/wargames/natas/
 
 
 ## Level 10
+* By examining the source code we find out that there is some kind of input validation on specific characters
+* However, this input validation is flawed and can be bypassed (a /etc/natas_webpass/natas11)
+
+#### Flag/Password: 1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
+
+## Level 11
 * 
 
