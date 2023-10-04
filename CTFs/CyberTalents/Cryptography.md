@@ -61,3 +61,13 @@ for a in str_base64:
 output: the flag is 2j68yfhqlz It is pretty easy to see the flag but can you see it i took nearly 1 minute to encode this with ROT13 good luck in solving that
 
 #### flag: 2j68yfhqlz
+
+
+## 06 - Louder
+* Given an audio file
+* After listening to the file I figured out it was morse code
+* Using an audio decoder I was able to get the flag (https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
+
+#### flag: flag{I AM SPEAKING LOUDER THAN YOU THINK}
+
+## 07 - 
