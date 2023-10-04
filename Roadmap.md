@@ -11,11 +11,11 @@ Books:
 
 #### The Process
 
-1- Pick 1 section 
-2- Read All-in-One Exam Guide chapters related to that section
-3- Read Sybex Exam Guide chapters related to that section
-4- Read Sybex Review Guide chapters related to that section
-5- Solve the practice questions from Sybex Practice Tests that are related to that section
+1. Pick 1 section
+2.  Read All-in-One Exam Guide chapters related to that section
+3. Read Sybex Exam Guide chapters related to that section
+4. Read Sybex Review Guide chapters related to that section
+5. Solve the practice questions from Sybex Practice Tests that are related to that section
 
 #### The sections
 
