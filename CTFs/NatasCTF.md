@@ -109,6 +109,6 @@ https://overthewire.org/wargames/natas/
 
 #### Flag/Password: 1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
 
-## Level 11
+## Level 11 (Looked up a write-up) - https://medium.com/@n01s/solving-natas-11-df246fcf7828
 * 
 
