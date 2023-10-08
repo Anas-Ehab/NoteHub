@@ -1,4 +1,4 @@
-## YARA Rules
+## YARA Rules (https://yara.readthedocs.io/en/stable/writingrules.html#:~:text=Text%20strings%20are%20enclosed%20in,not%20allowed%20in%20hex%20strings.)
 
 ### Introduction
 * Yara rules are set of rules that are used to identify a file based on its contents
