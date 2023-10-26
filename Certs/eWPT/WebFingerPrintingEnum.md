@@ -42,7 +42,23 @@
 * *fierce -dns DOMAIN - Perform DNS transfer & DNS bruteforce.
 * *sudo netdiscover -i INTERFACE -r NETWORK ADDRESS/NETMASK* - Ping sweep to check for active hosts in the network.
 * *fierce --domain URL --subdomain-file WORDLIST* - Does subdomain enumration.
-* *nikto -h URL* - 
+* *nikto -h URL* - Scans a URL and provides some insights
+* *nikto -h URL -Tuning # -Display V* - Tries some exploits based on the number given.
+* *nikto -h URL -Tuning # -Display V -o FILENAME.html -Format html* - Saves the output to FILENAME.
+* *dirb URL/IPADDRESS* - Finds directories for the provided URL/IP Address (Make sure to add http(s):// to the URL)
+* *gobuster dir -u URL -w WORDLIST -b 403,404 -r* - Perform directory scanning (-b to hide 404 and 403) (-r to follow redirects) (Make sure to add http(s) to the url)
+* *gobuster dir -u URL -w WORDLIST -b 403,404 -x .php,.xml,.txt -r* - Perform directory scanning (-x to specify the file type)
+* You can perform directory scanning using burpsuite intruder by requesting a variable and utilizing a wordlist.
+* You can also use ZAProxy by doing manual/active scanning.
+* Burpsuite live passive crawl (Dashboard) can be used to have a good image of the website and the URLs it contains.
+
+### Amass
+[Amass](https://github.com/owasp-amass/amass) - Tool to automate the enumrating process.
+
+* *amass enum -d URL* - Finds subdomains.
+* *amass enum -brute -d URL* - Do a bruteforce to find the subdomains.
+* *amass enum -o FILENAME -d URL* - Saves the output to the file specified.
+  
 ### Nmap
 * *sudo nmap OPTIONS NETWORKADDRESS/NETMASK OR IP*
 * Options:
@@ -57,3 +73,10 @@
   - *-T* Controls the speed of the scan 0 and 1 are for IDS evasion, default mode is 3, 4 and 5 sacrifice accuracy for speed.
   - *-oN FILENAME* Save the output into a file.
   - *-oX FILENAME* Save the output into an XML file.
+
+### Curl Commands
+* *curl -X GET URL* - Gets the specified URL.
+* *curl -I URL* - Gets the header of the specified URL.
+* *curl -X OPTIONS URL* - Tells you what methods are allowed for the specific URL.
+* *curl -X POST URL -d "VARIABLE=VALUE&VARIABLE2=VALUE -v* - Sends a post request that takes 2 variables.
+* *curl URL --upload-file FILENAME* - Uploads file to the specified path.
