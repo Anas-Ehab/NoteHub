@@ -17,6 +17,7 @@
 * *wafw00f URL -a* - Checks if the site is behind a WAF or not and if it's behind a WAF it provides you with the type of WAF. (-a to test for all types)
 * [Sublist3r](https://github.com/aboul3la/Sublist3r) - Finds the subdomains of a specific domain. (*sublist3r -d URL/DOMAIN*)
 * [Wayback Machine](https://archive.org/web/) - Provides snapshots of websites.
+* Metasploit auxiliary *scanner/http/http_version* - Provides the version of the system
 
 * Google Dorks
   - *site:URL* - Limits the results to the specified URL.
@@ -36,10 +37,12 @@
 
 ## Active Information Gathering
 * *dnsenum URL* - Perform DNS transfer & DNS bruteforce.
+* *dnsrecon -d URL* - General Enumration of the DNS records.
 * *dig axfr @NAMESERVER DOMAIN* - Perform DNS transfer & DNS bruteforce.
 * *fierce -dns DOMAIN - Perform DNS transfer & DNS bruteforce.
 * *sudo netdiscover -i INTERFACE -r NETWORK ADDRESS/NETMASK* - Ping sweep to check for active hosts in the network.
-
+* *fierce --domain URL --subdomain-file WORDLIST* - Does subdomain enumration.
+* *nikto -h URL* - 
 ### Nmap
 * *sudo nmap OPTIONS NETWORKADDRESS/NETMASK OR IP*
 * Options:
