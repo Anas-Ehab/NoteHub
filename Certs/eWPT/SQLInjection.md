@@ -32,3 +32,26 @@
   - Relational Databases - A database that organizes data into one or more tables or relations, where each table represents an entity or a concept, and the columns of the table represent the attributes of that entity or concept.
   - NoSQL Databases - A type of database that does not use the traditional tabular relations used in relational databases. Instead, NoSQL databases use a variety of data models to store and access data.
   - Object-oriented Databases - A database that stores data as objects rather than in tables, allowing for more complex data structures and relationships.
+
+## Hunting for SQLi
+* Identify an injection point that interacts with the database (i.e. login form & search boxes)
+* Probe the input field with special characters.
+* Input fields aren't just input forms, URL parameters, hidden fields, and cookies are all also injection points.
+* For Manual testing try injecting a malicious code (i.e. special characters, *-- # ' "*) and look for unexpected behaviour or any indication (i.e. errors) that the input is being handled through the database.
+* There are integer-based injection parameters and string-based injection parameters.
+  - For integer-based, the expected data is of type integer.
+  - As for string-based, the expected data is of type string.
+  - Payloads for each is different. For example, for an integer-based parameter, the payload can be something like, *AND 1* or *1\*56*. As for string-based payloads, it will look something like, *' - False* or *`" - True*.
+
+* Every DBMS responds to errors differently try to find out the DBMS based on the error received because every DBMS has its own payload lists.
+* Try URL Encoding.
+* To Check with OWASP ZAP
+  - Add the link to your default context and then do a spider and then an active scan. (Can be also utilized in a general vulnerability scan)
+  - Locate the request where injection can occur.
+  - Locate the injection point.
+  - Send the request to the fuzzer and add the injection point as a fuzz point.
+  - Go to file fuzzers --> jbrofuzz --> SQL Injection and then select all the lists.
+  - Check for reflected state. (It will contain lots of false positive but check them 1 by 1)
+
+## Exploiting SQLi
+* 
