@@ -54,4 +54,13 @@
   - Check for reflected state. (It will contain lots of false positive but check them 1 by 1)
 
 ## Exploiting SQLi
-* 
+* Even though exploiting can be done manually by trail and error, using automated tools is recommended as to save time.
+* SQLMap:
+  - The easier way to use it is by copying the request and using it instead of giving all the options.
+  - *sqlmap -r REQUEST -p INJECTIONPARAMETER --technique=TECHNIQUETOBEUSED*
+  - When asked do you want to resend original post data to a new location answer by *NO*
+  - If you know the DBMS type then you can skip other types.
+  - Try URL encoding if the original payload isn't working.
+  - Try replacing the *#* with *-- * and vice versa.
+  - *sqlmap -r REQUEST -p INJECTIONPARAMETER --technique=TECHNIQUETOBEUSED --current-db* dumps the database.
+  - *sqlmap -r REQUEST -p INJECTIONPARAMETER --technique=TECHNIQUETOBEUSED --os-shell* Tries to activate an interactive shell.
