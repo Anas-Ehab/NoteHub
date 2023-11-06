@@ -16,7 +16,7 @@
 
 ## Special Characters
 * *+* - One or more.
-* *\* - The escape character.
+* *\\* - The escape character.
 * *[]* - Character set.
 * *[^]* - Negate Symbol in a character set.
 * *?* - 0-or-1 quantifier (Any optional character Applied to the character before it.)
