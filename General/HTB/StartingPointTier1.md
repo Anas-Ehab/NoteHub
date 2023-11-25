@@ -24,6 +24,7 @@
 * *anonymous* user can be used to log in to FTP when you don't have an account.
 * *ftp IPADDRESS* is the command used to connect through ftp.
 * *get FILENAME* is the command used to download a file in a ftp session.
+* *anonymous* is the user used to login to an ftp session without a password.
 
 ## Responder
 
