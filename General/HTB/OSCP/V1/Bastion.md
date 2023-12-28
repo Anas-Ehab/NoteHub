@@ -1,4 +1,4 @@
-# Bastion (Continue)
+# Bastion 
 * Link: https://app.hackthebox.com/machines/Bastion
 * Type: Windows
 * Difficulty: Easy
