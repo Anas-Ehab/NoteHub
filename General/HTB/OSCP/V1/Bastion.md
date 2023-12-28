@@ -15,6 +15,7 @@
 * *impacket -secretdump -sam SAMFILENAME -system SYSTEMFILENAME* dumbs the hashes from the SAM and SYSTEM files.
 * *hashes.org* - to decrypt hashes.
 * *net user USERNAME* - information about the user in windows.
+* *impacket-psexec USERNAME@IPADDRESS* opens a powershell instance to a windows machine.
 * *powershell* starts a powershell instance.
 
 ## Steps
@@ -22,6 +23,17 @@
 * There is ssh and smb but since ssh is more secure by default, then check the smb first.
 * Check if eternal blue is applicable using nmap script.
 * Check the shares.
+* Access the share.
+* Find a backup, download and examine it.
+* Search for the SAM and SYSTEM files.
+* Extract the hashes from the SAM and SYSTEM files.
+* Decrypt the hashes.
+* SSH using the password.
+* Examine the logs, nothing there.
+* Examine the applications, find *mremoteng*.
+* Search online for the password. (In the config file in AppData/Roaming)
+* Extract the encrypted password, find a tool to decrypt.
+* Decrypt the password then login as admin.
 
 ## Notes
 * *.vhd* files can be extracted using 7zip.
