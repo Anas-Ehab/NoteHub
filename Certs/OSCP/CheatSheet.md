@@ -44,21 +44,32 @@
 * grep/search/etc..
 * sudo -l
 * 
-## Useful Information (General)
+## Useful Information
+
+### Useful Information (General)
 * Even if you don't have access to a directory you might have access to the files in that directory. (When you get a 403, try fuzzing inside the directory)
 * Some servers treat /Directory and /Directory/ differently, the first one might not be accessible but the second might be, make sure to check both when fuzzing.
 
 
-## Useful Information (Linux)
+### Useful Information (Linux)
 * Crontab are a list of commands in Linux that are executed on a regular basis. Making it a useful persistent technique and privilege escalation technique.
 * If a reverse shell is executed by a specific user, the shell granted will be of that user's privilege. (i.e. if you executed a shell as root, you will get root shell)
 * Sometimes even if you can execute a file, you can read/write to it.
 * Sometimes even if you aren't root, you can run specific commands with root privilege.
 
-## Useful Information (Windows)
+### Useful Information (Windows)
 
 
-### How to upgrade a shell to a fully interactive TTY.
+## Injection Payloads
+
+### SQL
+
+### Command Injection
+
+### XSS
+
+
+## How to upgrade a shell to a fully interactive TTY.
 * *python -c 'import pty; pty.spawn("/bin/bash")'* - Spwans */bin/bash* using Python’s PTY module
 * *Ctrl + Z* - Background the shell.
 * *stty raw -echo && fg* - Upgrade the local terminal with *stty* and foreground the reverse shell.
