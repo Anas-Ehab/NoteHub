@@ -12,7 +12,7 @@
 * gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u \<IP Address\>/<Directory>/ -x sh,cgi - Searches for files in a directory and (-x) is used to specify the extension.
 
 ## Windows Exploits
-* Blue
+* Blue (SMB)
 * PEASS-ng
 * 
 ## Linux Exploits
@@ -20,8 +20,6 @@
 ## Privilege Escalation
 
 ## Reverse Shells 
-
-## How to upgrade a shell.
 
 ## How to brute force
 
@@ -58,3 +56,10 @@
 * Sometimes even if you aren't root, you can run specific commands with root privilege.
 
 ## Useful Information (Windows)
+
+
+### How to upgrade a shell to a fully interactive TTY.
+* *python -c 'import pty; pty.spawn("/bin/bash")'* - Spwans */bin/bash* using Python’s PTY module
+* *Ctrl + Z* - Background the shell.
+* *stty raw -echo && fg* - Upgrade the local terminal with *stty* and foreground the reverse shell.
+* *Double Enter*
