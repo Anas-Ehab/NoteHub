@@ -11,12 +11,7 @@
 * *gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u \<IP Address\> -f* - (-f) is used when the server treats /cgi-bin and /cgi-bin/ differently.
 * gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u \<IP Address\>/<Directory>/ -x sh,cgi - Searches for files in a directory and (-x) is used to specify the extension.
 
-## Windows Exploits
-* Blue (SMB)
-* PEASS-ng
-* 
-## Linux Exploits
-
+Exploiting
 ## Privilege Escalation
 
 ## Reverse Shells 
@@ -74,3 +69,8 @@
 * *Ctrl + Z* - Background the shell.
 * *stty raw -echo && fg* - Upgrade the local terminal with *stty* and foreground the reverse shell.
 * *Double Enter*
+
+## General Major Vulnerabilities
+* Eternal Blue (SMB - Windows) (Privileged Access)
+* Dirty Cow (Linux - Privilege Escalation)
+* Valentine (SSH) (Memory Data Dump)
