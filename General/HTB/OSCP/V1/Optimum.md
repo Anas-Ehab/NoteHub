@@ -1,4 +1,4 @@
-# Optimum (Not Done)
+# Optimum
 * Link: https://app.hackthebox.com/machines/Optimum
 * Type: Windows
 * Difficulty: Easy
