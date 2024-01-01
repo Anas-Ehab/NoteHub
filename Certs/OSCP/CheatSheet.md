@@ -1,5 +1,13 @@
 # Enumuration
 
+## Check List
+* Run *nmap* to enumerate the open ports
+* Run *nmap* using the vulnerability scripts to find available vulnerabilities for the target.
+* If the target has an active webserver (*80/443/8080*), enumerate the webserver by visiting the server itself and running *gobuster*.
+  - If you found any info on the site (i.e. File Sharing Application X 2.22) search for a CVE for this system.
+* If the target has SMB (*139/445*), check if it's vulnerable to *Eternal Blue CVE* (*nmap* vulnerability scripts checks for it)
+* Run other enum tools 
+
 ## NMAP
 * *sudo nmap -sC -sV -O -oA \<Output Directory\> \<IP Address\>* - Basic nmap scan for the top ports only. (-sC for default scripts, -sV for version enum, -O for OS enum)
 * *sudo nmap -sC -sV -O -p- -oA \<Output Directory\> \<IP Address\>* - Scan for all the ports.
@@ -11,7 +19,13 @@
 * *gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u \<IP Address\> -f* - (-f) is used when the server treats /cgi-bin and /cgi-bin/ differently.
 * gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u \<IP Address\>/<Directory>/ -x sh,cgi - Searches for files in a directory and (-x) is used to specify the extension.
 
-Exploiting
+## Important Tools
+### Enumeration/Recon
+* [Nmap](https://nmap.org/): A tool that scans a target and provides a list of the open ports, it can also run many scripts that can enumerate the version, OS, and run multiple checks on known CVEs.
+* [Gobuster](https://github.com/OJ/gobuster): A tool that's used for fuzzing a webserver to find directories, files, etc..
+
+
+# Initial Access
 ## Privilege Escalation
 
 ## Reverse Shells 
@@ -47,7 +61,7 @@ Exploiting
 
 
 ### Useful Information (Linux)
-* Crontab are a list of commands in Linux that are executed on a regular basis. Making it a useful persistent technique and privilege escalation technique.
+* Crontab are a list of commands in Linux that are executed regularly. Making it a useful persistent technique and privilege escalation technique.
 * If a reverse shell is executed by a specific user, the shell granted will be of that user's privilege. (i.e. if you executed a shell as root, you will get root shell)
 * Sometimes even if you can execute a file, you can read/write to it.
 * Sometimes even if you aren't root, you can run specific commands with root privilege.
@@ -74,3 +88,6 @@ Exploiting
 * Eternal Blue (SMB - Windows) (Privileged Access)
 * Dirty Cow (Linux - Privilege Escalation)
 * Valentine (SSH) (Memory Data Dump)
+
+
+* [PEASS-ng](https://github.com/carlospolop/PEASS-ng): A tool that tries to find privilege escalation techniques in a machine, can be run after gaining initial access as it needs to be run from the target machine.
