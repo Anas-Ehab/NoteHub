@@ -45,3 +45,6 @@
 * *grep --color=auto -rnw '/' -ie "PASSWORD=" --color=always 2> /dev/null* - Searches for "password" with colors.
 * *locate password | more* - Searches for files named password. (Use *passwd*/*pass*/etc..)
 * *find / -name id_rsa 2> /dev/null* - Searches for SSH keys.
+
+## Kernel Exploits
+* A kernel is a computer program that controls everything in the system. It facilitates the communication between the hardware and software.
