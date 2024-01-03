@@ -38,7 +38,7 @@
 * *ip a* - Shows your network interfaces and your IP address.
 * *ip route* - Shows the network routes.
 * *arp -a* - Shows you the arp entities.
-* *ip neigh* - Shows you the arp entities.
+* *ip neigh* - Shows you the ARP entities.
 * *netstat -ano* - Shows you the open ports and the established connections.
 
 ### Password Hunting
@@ -48,3 +48,13 @@
 
 ## Kernel Exploits
 * A kernel is a computer program that controls everything in the system. It facilitates the communication between the hardware and software.
+* Identify the operating system/version and try to find any exploits for that kernel.
+* Known CVEs: DirtyCow.
+
+### Manual Method
+* *uname -a* - Copy the system info and try to find CVEs for it.
+
+
+## Stored Passwords
+* Check the commands history by typing *history*.
+* Check the bash history by *cat .bash_history*.
